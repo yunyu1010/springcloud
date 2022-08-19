@@ -16,8 +16,11 @@ public class GateWayConfig {
         routes.route("path_route_atguigu", r -> r.path("/guoji").uri("http://news.baidu.com/guonei"))
                 .build();
 
-//        routes.route("payment_routh2", r -> r.path("/payment/lb/**").uri("lb://cloud-payment-service"))
-//                .build();
+
+        routes.route("payment_routh", r -> r.path("/payment/lb/**").uri("lb://cloud-payment-service"))
+                .build();
+        routes.route("payment_routh2", r -> r.path("/payment/lb/**").uri("lb://cloud-payment-service"))
+                .build();
 
 
         return routes.build();
