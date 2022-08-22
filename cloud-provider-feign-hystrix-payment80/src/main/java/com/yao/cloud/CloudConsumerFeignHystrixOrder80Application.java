@@ -10,6 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix // 启动 hystrix
 public class CloudConsumerFeignHystrixOrder80Application {
     public static void main(String[] args) {
-        SpringApplication.run(CloudConsumerFeignHystrixOrder80Application.class,args);
+        SpringApplication.run(CloudConsumerFeignHystrixOrder80Application.class, args);
     }
 }

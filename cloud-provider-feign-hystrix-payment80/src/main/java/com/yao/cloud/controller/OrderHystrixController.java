@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 @RequestMapping("consumer")
 @Slf4j
 @DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")// hystrix 全局fallback方法
-public class OrderHystrixController  {
+public class OrderHystrixController {
 
     @Resource
     private PaymentHystrixService paymentHystrixService;
@@ -39,7 +39,7 @@ public class OrderHystrixController  {
         return result;
     }
 
-    public String paymentInfoTimeOutHandler(@PathVariable("id") Integer id){
+    public String paymentInfoTimeOutHandler(@PathVariable("id") Integer id) {
         return "我是消费者80,对方支付系统繁忙请10秒钟后再试或者自己运行出错请检查自己,o(╥﹏╥)o";
     }
 
